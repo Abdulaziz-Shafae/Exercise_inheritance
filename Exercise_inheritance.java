@@ -19,7 +19,7 @@ public class Exercise_inheritance {
         c1.setRadius(4);
         System.out.println(c1.toString());
 
-        System.out.println("\n   --------------- "+CYAN+"Rectangle"+MAIN+" --------------n");
+        System.out.println("\n   --------------- "+CYAN+"Rectangle"+MAIN+" --------------");
 
         Rectangle r1 = new Rectangle();
         r1.setColor("green");
@@ -28,7 +28,7 @@ public class Exercise_inheritance {
         r1.setLength(3);
         System.out.println(r1.toString());
 
-        System.out.println("\n   ---------------- "+CYAN+"Square"+MAIN+" ----------------n");
+        System.out.println("\n   ---------------- "+CYAN+"Square"+MAIN+" ----------------");
 
         Square s1 = new Square();
         s1.setColor("blue");

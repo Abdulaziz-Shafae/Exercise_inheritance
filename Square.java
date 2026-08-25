@@ -1,5 +1,3 @@
-package Day2.Exercise;
-
 public class Square extends Rectangle {
 
     public static final String MAIN = "\u001B[97m";

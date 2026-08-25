@@ -1,4 +1,4 @@
-package Day2;
+package Day2.Exercise;
 
 public class Shape {
 
@@ -9,6 +9,8 @@ public class Shape {
 
     public Shape(){
         System.out.print(MAIN);
+        color="green";
+        filled=true;
 
     }
 
@@ -34,6 +36,10 @@ public class Shape {
 
     public boolean isFilled() {
         return filled;
+    }
+
+    public String toString(){
+        return "A Shape with color of " + getColor() + " and " + (isFilled()? "filled" : "Not filled" );
     }
 
 }

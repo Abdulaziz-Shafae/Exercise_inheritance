@@ -1,12 +1,18 @@
-package Day2;
+package Day2.Exercise;
 
 public class Circle extends Shape {
 
     public static final String MAIN = "\u001B[97m";
+    public static final String GREEN = "\u001B[32m";
 
     private  double radius;
 
     public Circle(){
+        radius=1.0;
+        System.out.print(MAIN);
+    }
+    public Circle(double radius) {
+        this.radius=radius;
         System.out.print(MAIN);
     }
     public Circle(String color, boolean filled , double radius){
@@ -24,20 +30,20 @@ public class Circle extends Shape {
         return radius;
     }
 
-    public double getArea(double radius){
-        return (3.14*radius*radius);
+    public double getArea(){
+        return (3.14*getRadius()*getRadius());
     }
 
-    public double getParameter(double radius){
-        return (2*3.14*radius);
+    public double getPerimeter(){
+        return (2*3.14*getRadius());
     }
 
     public String toString(){
-        return ("   the radius is: " + radius +
-                "\n   the color is: " + super.getColor() +
-                "\n   is filled? " + (isFilled()? "yes" : "no") +
-                "\n   the area is: " + getArea(radius)+
-                "\n   the parameter is: " + getParameter(radius));
+        return ( "A Circle with radius="+getRadius()+", " +
+                "\nwhich is a subclass of " + getClass().getSuperclass().getSimpleName() + ", " +
+                "\nwhere " +GREEN+ super.toString() +MAIN+ " is the output of " +
+                "\nthe toString() method from the superclass." );
+
 
     }
 

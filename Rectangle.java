@@ -1,14 +1,24 @@
-package Day2;
+package Day2.Exercise;
 
 public class Rectangle extends Shape{
 
     public static final String MAIN = "\u001B[97m";
+    public static final String GREEN = "\u001B[32m";
 
     private double width;
     private double length;
 
     public Rectangle(){
+        width=1.0;
+        length=1.0;
         System.out.print(MAIN);
+    }
+
+    public Rectangle(double width , double length){
+        this.width=width;
+        this.length=length;
+        System.out.print(MAIN);
+
     }
     public Rectangle(String color, boolean filled , double width , double length){
         super(color,filled);
@@ -38,16 +48,14 @@ public class Rectangle extends Shape{
         return (length*width);
     }
 
-    public  double getParameter(){
+    public  double getPerimeter(){
         return (2*(length+width));
     }
 
     public String toString(){
-        return ("   the width is: " + width +
-                "\n   the length is: " + length +
-                "\n   the color is: " + super.getColor() +
-                "\n   is filled? " + (isFilled()? "yes" : "no") +
-                "\n   the area is: " + getArea()+
-                "\n   the parameter is: " + getParameter());
+        return ("A Rectangle with width:"+getWidth()+", and length="+getLength()+", "+
+                "\nwhich is subclass of "+ getClass().getSuperclass().getSimpleName() + ", " +
+                "\nwhere " +GREEN+ super.toString() +MAIN+ " is the output of " +
+                "\nthe toString() method from the superclass." );
     }
 }
